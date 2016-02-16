@@ -1,0 +1,12 @@
+require 'spec_helper.rb'
+
+describe 'TDD Sinatra', :type => :feature do
+	
+	it 'visit Homepage' do 
+		visit '/'
+
+		expect(page).to have_css('.logo')
+		expect(page).to have_content('Buy')
+	end
+
+	end
